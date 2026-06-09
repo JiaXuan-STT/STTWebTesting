@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, ScrollRestoration } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -10,13 +10,9 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import './App.css'
 
-function ScrollToTop() {
-  return null
-}
-
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,6 +24,6 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
